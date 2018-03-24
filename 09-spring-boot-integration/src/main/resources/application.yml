@@ -1,0 +1,14 @@
+
+server:
+    port: 10083
+    
+#=========== DRUMMER JOBS ===========
+
+drummer:
+  springtest:
+    everySecond: 25
+
+
+#=========== EOF DRUMMER JOBS ===========
+
+
