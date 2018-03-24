@@ -1,0 +1,69 @@
+package com.elephant.drummer.example.job;
+
+import com.elephant.drummer.annotation.DrummerJob;
+import com.elephant.drummer.annotation.TestJob;
+import com.elephant.drummer.annotation.trigger.After;
+import com.elephant.drummer.annotation.trigger.Before;
+import com.elephant.drummer.annotation.trigger.DateMask;
+import com.elephant.drummer.annotation.trigger.Period;
+import com.elephant.drummer.scope.DrummerObservable;
+
+public class PeriodAndDateMaskExtra implements DrummerObservable{
+	
+	
+	
+	/**
+	 * Run job with following triggers:
+	 * -every 40 minutes
+	 * -every 15 minutes
+	 * -at 4th minut of hour
+	 * -at 14th minut of hour
+	 * 
+	 * TestJob printout:
+	 * *** Step:1 for date: Fri Mar 23 13:19:01 CET 2018 next execution: Fri Mar 23 13:30:00 CET 2018 ***
+	 * *** Step:2 for date: Fri Mar 23 13:30:00 CET 2018 next execution: Fri Mar 23 13:40:00 CET 2018 ***
+	 * *** Step:3 for date: Fri Mar 23 13:40:00 CET 2018 next execution: Fri Mar 23 13:45:00 CET 2018 ***
+	 * *** Step:4 for date: Fri Mar 23 13:45:00 CET 2018 next execution: Fri Mar 23 14:00:00 CET 2018 ***
+	 * *** Step:5 for date: Fri Mar 23 14:00:00 CET 2018 next execution: Fri Mar 23 14:04:00 CET 2018 ***
+	 * *** Step:6 for date: Fri Mar 23 14:04:00 CET 2018 next execution: Fri Mar 23 14:14:00 CET 2018 ***
+	 * *** Step:7 for date: Fri Mar 23 14:14:00 CET 2018 next execution: Fri Mar 23 14:15:00 CET 2018 ***
+	 * *** Step:8 for date: Fri Mar 23 14:15:00 CET 2018 next execution: Fri Mar 23 14:20:00 CET 2018 ***
+	 * *** Step:9 for date: Fri Mar 23 14:20:00 CET 2018 next execution: Fri Mar 23 14:30:00 CET 2018 ***
+	 * *** Step:10 for date: Fri Mar 23 14:30:00 CET 2018 next execution: Fri Mar 23 14:45:00 CET 2018 ***
+	 */
+	@TestJob(executeJob=false)
+	@DrummerJob(
+			every= { @Period(minute=40),@Period(minute=15) }, 
+			at= { @DateMask(minute=4),@DateMask(minute=14) }
+			)
+	public void test01() {
+		
+	}
+
+	
+	/**
+	 * Execute job every 10 seconds in first half of minute or every 11 seconds in second half of minute
+	 * 
+	 * TestJob printout:
+	 * *** Step:1 for date: Fri Mar 23 13:40:23 CET 2018 next execution: Fri Mar 23 13:40:27 CET 2018 ***
+	 * *** Step:2 for date: Fri Mar 23 13:40:27 CET 2018 next execution: Fri Mar 23 13:40:30 CET 2018 ***
+	 * *** Step:3 for date: Fri Mar 23 13:40:30 CET 2018 next execution: Fri Mar 23 13:40:40 CET 2018 ***
+	 * *** Step:4 for date: Fri Mar 23 13:40:40 CET 2018 next execution: Fri Mar 23 13:40:50 CET 2018 ***
+	 * *** Step:5 for date: Fri Mar 23 13:40:50 CET 2018 next execution: Fri Mar 23 13:41:00 CET 2018 ***
+	 * *** Step:6 for date: Fri Mar 23 13:41:00 CET 2018 next execution: Fri Mar 23 13:41:11 CET 2018 ***
+	 * *** Step:7 for date: Fri Mar 23 13:41:11 CET 2018 next execution: Fri Mar 23 13:41:22 CET 2018 ***
+	 * *** Step:8 for date: Fri Mar 23 13:41:22 CET 2018 next execution: Fri Mar 23 13:41:30 CET 2018 ***
+	 * *** Step:9 for date: Fri Mar 23 13:41:30 CET 2018 next execution: Fri Mar 23 13:41:40 CET 2018 ***
+	 * *** Step:10 for date: Fri Mar 23 13:41:40 CET 2018 next execution: Fri Mar 23 13:41:50 CET 2018 ***
+	 */
+	@TestJob(executeJob=false)
+	@DrummerJob(every= { 
+					@Period(second=10,after=@After(second=30)),
+					@Period(second=11,before=@Before(second=30))
+					}
+			)
+	public void test02() {
+		
+	}
+
+}
