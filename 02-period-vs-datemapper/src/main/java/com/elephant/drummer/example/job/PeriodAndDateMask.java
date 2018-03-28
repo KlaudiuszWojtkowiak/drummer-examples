@@ -3,8 +3,8 @@ package com.elephant.drummer.example.job;
 import java.util.logging.Logger;
 
 import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.trigger.DateMask;
-import com.elephant.drummer.annotation.trigger.Period;
+import com.elephant.drummer.annotation.trigger.On;
+import com.elephant.drummer.annotation.trigger.Every;
 import com.elephant.drummer.scope.DrummerObservable;
 
 /**
@@ -19,7 +19,7 @@ public class PeriodAndDateMask implements DrummerObservable{
 	/**
 	 * Every some period execution
 	 */
-	@DrummerJob(every=@Period(second=10))
+	@DrummerJob(every=@Every(second=10))
 	public void everyPeriod() {
 		log.info("Every 10 second");
 	}
@@ -27,7 +27,7 @@ public class PeriodAndDateMask implements DrummerObservable{
 	/**
 	 * At some DateMask execution
 	 */
-	@DrummerJob(at=@DateMask(second=10))
+	@DrummerJob(on=@On(second=10))
 	public void atDate() {
 		log.info("At 10 second");
 	}
