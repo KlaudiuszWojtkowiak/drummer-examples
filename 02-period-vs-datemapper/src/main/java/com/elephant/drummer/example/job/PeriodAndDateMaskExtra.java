@@ -3,8 +3,8 @@ package com.elephant.drummer.example.job;
 import com.elephant.drummer.annotation.DrummerJob;
 import com.elephant.drummer.annotation.TestJob;
 import com.elephant.drummer.annotation.trigger.After;
+import com.elephant.drummer.annotation.trigger.At;
 import com.elephant.drummer.annotation.trigger.Before;
-import com.elephant.drummer.annotation.trigger.On;
 import com.elephant.drummer.annotation.trigger.Every;
 import com.elephant.drummer.scope.DrummerObservable;
 
@@ -34,7 +34,7 @@ public class PeriodAndDateMaskExtra implements DrummerObservable{
 	@TestJob(executeJob=false)
 	@DrummerJob(
 			every= { @Every(minute=40),@Every(minute=15) }, 
-			on= { @On(minute=4),@On(minute=14) }
+			at= { @At(minute=4),@At(minute=14) }
 			)
 	public void test01() {
 		

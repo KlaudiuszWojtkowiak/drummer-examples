@@ -6,6 +6,7 @@ import com.elephant.drummer.annotation.DrummerJob;
 import com.elephant.drummer.annotation.trigger.After;
 import com.elephant.drummer.annotation.trigger.Before;
 import com.elephant.drummer.annotation.trigger.Every;
+import com.elephant.drummer.annotation.trigger.Range;
 import com.elephant.drummer.scope.DrummerObservable;
 
 /**
@@ -23,8 +24,7 @@ public class PeriodExamples implements DrummerObservable{
 		log.info("This job is running every 100 seconds. So that you can configure your jobs without time limits.");
 	}
 	
-	@DrummerJob(every=@Every(second=30),
-			shift=@Every(second=20))
+	@DrummerJob(every=@Every(second=30),shift=@Range(second=20))
 	public void shift() {
 		log.info("Every 30 seconds, but with shift up to 20 seconds. So that your execution will be shifted by random time from this range.");
 	}
