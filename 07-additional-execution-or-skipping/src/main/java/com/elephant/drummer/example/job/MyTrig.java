@@ -3,9 +3,7 @@ package com.elephant.drummer.example.job;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.elephant.drummer.trigger.base.DrumTrigger;
-import com.elephant.drummer.trigger.base.TriggerType;
-import com.elephant.drummer.trigger.customised.ProgramicTrigger;
+import com.elephant.drummer.trigger.ProgramicTrigger;
 
 public class MyTrig extends ProgramicTrigger{
 

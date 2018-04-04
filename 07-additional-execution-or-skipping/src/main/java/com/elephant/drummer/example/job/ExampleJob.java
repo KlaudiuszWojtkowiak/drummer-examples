@@ -3,6 +3,7 @@ package com.elephant.drummer.example.job;
 import java.util.Random;
 import java.util.logging.Logger;
 
+import com.elephant.drummer.DrummerStarter;
 import com.elephant.drummer.annotation.DrummerJob;
 import com.elephant.drummer.annotation.TestJob;
 import com.elephant.drummer.annotation.trigger.Every;
@@ -33,6 +34,8 @@ public class ExampleJob implements DrummerObservable{
 	
 	@DrummerJob(every=@Every(second=5),skipExecutionWhenPreviousJobIsRunning=true,threads=2)
 	public void longTimeJob2() {
+		
+		
 		String threadname=Thread.currentThread().getName();
 		log.info("this job starts every 5 seconds in task:"+threadname+" but the job need randomly 8-18 seconds");
 		try {

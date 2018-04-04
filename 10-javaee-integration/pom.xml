@@ -33,7 +33,7 @@
 
 	<dependency>
 		<groupId>com.elephant</groupId>
-		<artifactId>drummer-jdk</artifactId>
+		<artifactId>drummer</artifactId>
 		<version>1.2</version>
 		<scope>compile</scope>
 	</dependency>
