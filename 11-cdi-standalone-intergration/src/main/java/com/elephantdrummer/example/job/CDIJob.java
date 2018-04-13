@@ -9,9 +9,9 @@ import com.elephantdrummer.annotation.trigger.Every;
 import com.elephantdrummer.scope.DrummerObservable;
 
 @ApplicationScoped
-public class JeeJob implements DrummerObservable{
+public class CDIJob implements DrummerObservable{
 	
-	Logger log=Logger.getLogger(JeeJob.class.getName());
+	Logger log=Logger.getLogger(CDIJob.class.getName());
 	
 	@DrummerJob(every=@Every(second=10))
 	public void jeeJobMethod() {
