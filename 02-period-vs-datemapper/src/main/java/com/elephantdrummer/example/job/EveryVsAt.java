@@ -12,9 +12,9 @@ import com.elephantdrummer.scope.DrummerObservable;
  * @author Klaudiusz Wojtkowiak Elephant Software 2018
  *
  */
-public class EveryAndAt implements DrummerObservable{
+public class EveryVsAt implements DrummerObservable{
 	
-	Logger log=Logger.getLogger(EveryAndAt.class.getSimpleName());
+	Logger log=Logger.getLogger(EveryVsAt.class.getSimpleName());
 	
 	/**
 	 * Every some period execution
