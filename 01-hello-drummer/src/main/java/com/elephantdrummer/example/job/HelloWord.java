@@ -1,10 +1,10 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.logging.Logger;
 
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.trigger.Period;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.trigger.Every;
+import com.elephantdrummer.scope.DrummerObservable;
 
 /**
  * 
@@ -18,7 +18,7 @@ public class HelloWord implements DrummerObservable{
 	/**
 	 * Basic example how to use Drummer for simple period execution
 	 */
-	@DrummerJob(every=@Period(second=10))
+	@DrummerJob(every=@Every(second=10))
 	public void helloWorld() {
 		log.info("Hello! Your first Drummer Job is working!");
 	}
