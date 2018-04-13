@@ -14,9 +14,9 @@ import com.elephantdrummer.scope.DrummerObservable;
  * @author Klaudiusz Wojtkowiak Elephant Software 2018
  *
  */
-public class PeriodExamples implements DrummerObservable{
+public class EveryExamples implements DrummerObservable{
 	
-	Logger log=Logger.getLogger(PeriodExamples.class.getSimpleName());
+	Logger log=Logger.getLogger(EveryExamples.class.getSimpleName());
 	
 
 	@DrummerJob(every=@Every(second=100))

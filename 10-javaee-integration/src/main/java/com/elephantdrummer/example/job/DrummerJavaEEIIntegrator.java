@@ -20,7 +20,7 @@ import com.elephantdrummer.scope.DrummerObservable;
 @Singleton
 @Startup
 @ApplicationScoped
-public class DrummerCCDIIntegrator {
+public class DrummerJavaEEIIntegrator {
 
 	private @Inject @Any Instance<DrummerObservable> joblist;
 	
@@ -34,8 +34,6 @@ public class DrummerCCDIIntegrator {
 		for (DrummerObservable dobs:joblist) {
 			l.add(dobs);
 		}
-		
-		System.out.println("inicjuje dla "+l.size());
 		
 		starter.boot(l);
 	}

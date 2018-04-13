@@ -12,9 +12,9 @@ import com.elephantdrummer.scope.DrummerObservable;
  * @author Klaudiusz Wojtkowiak Elephant Software 2018
  *
  */
-public class PeriodAndDateMask implements DrummerObservable{
+public class EveryAndAt implements DrummerObservable{
 	
-	Logger log=Logger.getLogger(PeriodAndDateMask.class.getSimpleName());
+	Logger log=Logger.getLogger(EveryAndAt.class.getSimpleName());
 	
 	/**
 	 * Every some period execution
@@ -25,7 +25,7 @@ public class PeriodAndDateMask implements DrummerObservable{
 	}
 	
 	/**
-	 * At some DateMask execution
+	 * At some DateTime execution
 	 */
 	@DrummerJob(at=@At(second=10))
 	public void atDate() {

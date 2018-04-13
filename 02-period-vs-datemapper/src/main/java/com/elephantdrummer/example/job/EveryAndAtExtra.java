@@ -8,7 +8,7 @@ import com.elephantdrummer.annotation.trigger.Before;
 import com.elephantdrummer.annotation.trigger.Every;
 import com.elephantdrummer.scope.DrummerObservable;
 
-public class PeriodAndDateMaskExtra implements DrummerObservable{
+public class EveryAndAtExtra implements DrummerObservable{
 	
 	
 	

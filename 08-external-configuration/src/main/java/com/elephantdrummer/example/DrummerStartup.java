@@ -19,8 +19,8 @@ public class DrummerStartup {
 		config.put("drummer.second.1.every.second", "4");
 		config.put("drummer.second.2.every.second", "3");
 		
-		config.put("drummer.three.at.second", "10");
-		config.put("drummer.three.threads", "2");
+		config.put("drummer.third.at.second", "10");
+		config.put("drummer.third.threads", "2");
 		DrummerStarter.init(config);
 	}
 

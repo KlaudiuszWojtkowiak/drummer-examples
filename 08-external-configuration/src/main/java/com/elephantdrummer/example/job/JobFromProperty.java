@@ -11,21 +11,21 @@ public class JobFromProperty implements DrummerObservable{
 	Logger log=Logger.getLogger(JobFromProperty.class.getSimpleName());
 	
 	@TestJob
-	@DrummerJob(name=DictDrummerJob.EVERY_10_SECONDS)
+	@DrummerJob(name=DictDrummerJob.FIRST)
 	public void job() {
-		log.info("properties based job named: "+DictDrummerJob.EVERY_10_SECONDS+" has been executed.");
+		log.info("properties based job named: "+DictDrummerJob.FIRST+" has been executed.");
 	}
 	
 	@TestJob
-	@DrummerJob(name=DictDrummerJob.EVERY_3_OR_4_SECONDS)
+	@DrummerJob(name=DictDrummerJob.SECOND)
 	public void job2() {
-		log.info("properties based job named: "+DictDrummerJob.EVERY_3_OR_4_SECONDS+" has been executed.");
+		log.info("properties based job named: "+DictDrummerJob.SECOND+" has been executed.");
 	}
 	
 	@TestJob
-	@DrummerJob(name=DictDrummerJob.AT_10_SECOND_TWO_THREADS)
+	@DrummerJob(name=DictDrummerJob.THIRD)
 	public void job3() {
-		log.info("properties based job named: "+DictDrummerJob.AT_10_SECOND_TWO_THREADS+" has been executed.");
+		log.info("properties based job named: "+DictDrummerJob.THIRD+" has been executed.");
 	}
 
 }
