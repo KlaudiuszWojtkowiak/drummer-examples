@@ -21,7 +21,7 @@
 		</dependency>
 
 	<dependency>
-		<groupId>com.elephant</groupId>
+		<groupId>com.elephantdrummer</groupId>
 		<artifactId>drummer</artifactId>
 		<version>1.2</version>
 		<scope>compile</scope>

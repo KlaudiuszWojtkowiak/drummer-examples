@@ -1,4 +1,4 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.logging.Logger;
 
@@ -6,10 +6,10 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.TestJob;
-import com.elephant.drummer.annotation.trigger.At;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.TestJob;
+import com.elephantdrummer.annotation.trigger.At;
+import com.elephantdrummer.scope.DrummerObservable;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)

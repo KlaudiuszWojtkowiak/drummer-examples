@@ -1,13 +1,13 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.Random;
 import java.util.logging.Logger;
 
-import com.elephant.drummer.DrummerStarter;
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.TestJob;
-import com.elephant.drummer.annotation.trigger.Every;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.DrummerStarter;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.TestJob;
+import com.elephantdrummer.annotation.trigger.Every;
+import com.elephantdrummer.scope.DrummerObservable;
 
 public class ExampleJob implements DrummerObservable{
 	

@@ -1,12 +1,12 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.trigger.Every;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.trigger.Every;
+import com.elephantdrummer.scope.DrummerObservable;
 
 @ApplicationScoped
 public class JeeJob implements DrummerObservable{

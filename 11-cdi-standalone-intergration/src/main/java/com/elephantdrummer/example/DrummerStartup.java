@@ -1,4 +1,4 @@
-package com.elephant.drummer.example;
+package com.elephantdrummer.example;
 
 
 import java.util.HashMap;
@@ -14,8 +14,8 @@ import javax.inject.Inject;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 
-import com.elephant.drummer.DrummerBoot;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.DrummerBoot;
+import com.elephantdrummer.scope.DrummerObservable;
 
 /**
  * Start Drummer for java standallone mode

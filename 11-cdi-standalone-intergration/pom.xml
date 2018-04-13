@@ -14,15 +14,10 @@
 	  
       <dependencies>
 
-		<dependency>
-			<groupId>com.elephant</groupId>
-			<artifactId>elephant-internal-logger-spring-jul</artifactId>
-			<version>1.0.0</version>
-			<scope>compile</scope>
-		</dependency>
+
 
 	<dependency>
-		<groupId>com.elephant</groupId>
+		<groupId>com.elephantdrummer</groupId>
 		<artifactId>drummer</artifactId>
 		<version>1.2</version>
 		<scope>compile</scope>

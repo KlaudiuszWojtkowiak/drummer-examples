@@ -1,4 +1,4 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 
 import java.util.HashMap;
@@ -14,8 +14,8 @@ import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 
-import com.elephant.drummer.DrummerBoot;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.DrummerBoot;
+import com.elephantdrummer.scope.DrummerObservable;
 
 @Singleton
 @Startup

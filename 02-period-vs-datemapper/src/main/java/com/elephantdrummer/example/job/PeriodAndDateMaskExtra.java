@@ -1,12 +1,12 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.TestJob;
-import com.elephant.drummer.annotation.trigger.After;
-import com.elephant.drummer.annotation.trigger.At;
-import com.elephant.drummer.annotation.trigger.Before;
-import com.elephant.drummer.annotation.trigger.Every;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.TestJob;
+import com.elephantdrummer.annotation.trigger.After;
+import com.elephantdrummer.annotation.trigger.At;
+import com.elephantdrummer.annotation.trigger.Before;
+import com.elephantdrummer.annotation.trigger.Every;
+import com.elephantdrummer.scope.DrummerObservable;
 
 public class PeriodAndDateMaskExtra implements DrummerObservable{
 	

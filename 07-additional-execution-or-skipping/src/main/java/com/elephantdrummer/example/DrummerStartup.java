@@ -1,7 +1,7 @@
-package com.elephant.drummer.example;
+package com.elephantdrummer.example;
 
 
-import com.elephant.drummer.DrummerStarter;
+import com.elephantdrummer.DrummerStarter;
 
 /**
  * Start Drummer for java standallone mode

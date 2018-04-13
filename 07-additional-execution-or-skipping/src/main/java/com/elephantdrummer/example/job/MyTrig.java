@@ -1,9 +1,9 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import com.elephant.drummer.trigger.ProgramicTrigger;
+import com.elephantdrummer.trigger.ProgramicTrigger;
 
 public class MyTrig extends ProgramicTrigger{
 

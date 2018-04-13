@@ -1,4 +1,4 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 public interface DictDrummerJob {
 	

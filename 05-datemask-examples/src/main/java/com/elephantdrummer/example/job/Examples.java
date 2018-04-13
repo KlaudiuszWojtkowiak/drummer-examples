@@ -1,12 +1,12 @@
-package com.elephant.drummer.example.job;
+package com.elephantdrummer.example.job;
 
 import java.util.logging.Logger;
 
-import com.elephant.drummer.annotation.DayOfWeek;
-import com.elephant.drummer.annotation.DrummerJob;
-import com.elephant.drummer.annotation.TestJob;
-import com.elephant.drummer.annotation.trigger.At;
-import com.elephant.drummer.scope.DrummerObservable;
+import com.elephantdrummer.annotation.DayOfWeek;
+import com.elephantdrummer.annotation.DrummerJob;
+import com.elephantdrummer.annotation.TestJob;
+import com.elephantdrummer.annotation.trigger.At;
+import com.elephantdrummer.scope.DrummerObservable;
 
 public class Examples implements DrummerObservable{
 	
