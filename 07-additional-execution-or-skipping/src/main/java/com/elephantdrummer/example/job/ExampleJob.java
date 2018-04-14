@@ -14,23 +14,23 @@ public class ExampleJob implements DrummerObservable{
 	Logger log=Logger.getLogger(ExampleJob.class.getSimpleName());
 	
 	
-//	@DrummerJob(every=@Period(second=2),skipExecutionWhenPreviousJobIsRunning=true)
-//	public void longTimeJob() {
-//		log.info("this job is starts every 2 seconds in task:"+Thread.currentThread().getName()+" but the job need 5 seconds");
-//		try {
-//			Thread.sleep(3500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		log.info("Job execution has ended..");
-//	}
-
-	@TestJob
-	@DrummerJob(trigger=MyTrig.class)
-	public void test1() {
-		System.out.println("aa");
+	@DrummerJob(every=@Every(second=2),skipExecutionWhenPreviousJobIsRunning=true)
+	public void longTimeJob() {
+		log.info("this job is starts every 2 seconds in task:"+Thread.currentThread().getName()+" but the job need 5 seconds");
+		try {
+			Thread.sleep(3500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		log.info("Job execution has ended..");
 	}
+
+//	@TestJob
+//	@DrummerJob(trigger=MyTrig.class)
+//	public void test1() {
+//		System.out.println("aa");
+//	}
 	
 	@DrummerJob(every=@Every(second=5),skipExecutionWhenPreviousJobIsRunning=true,threads=2)
 	public void longTimeJob2() {
