@@ -34,7 +34,7 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>com.elephant</groupId>
+			<groupId>com.elephantdrummer</groupId>
 			<artifactId>drummer-spring-integrator</artifactId>
 			<version>1.0.0</version>
 			<scope>compile</scope>

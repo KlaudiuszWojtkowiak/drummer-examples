@@ -2,6 +2,7 @@ package com.elephantdrummer.example.job;
 
 import java.util.logging.Logger;
 
+import com.elephantdrummer.annotation.DayOfWeek;
 import com.elephantdrummer.annotation.DrummerJob;
 import com.elephantdrummer.annotation.trigger.After;
 import com.elephantdrummer.annotation.trigger.Before;
@@ -35,5 +36,11 @@ public class EveryExamples implements DrummerObservable{
 		log.info("Every 5 seconds, but after 20 and before 40 second of each minute.");
 	}
 	
-
+	@DrummerJob(every=@Every(hour=1,after=@After(dayOfWeek=DayOfWeek.FRIDAY)))
+	public void afterFriday() {
+		log.info("Every hour after Friday.");
+	}
+	
+	
+	
 }

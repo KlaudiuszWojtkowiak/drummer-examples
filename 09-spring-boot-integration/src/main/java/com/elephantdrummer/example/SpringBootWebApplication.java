@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
-@SpringBootApplication(scanBasePackages={"com.elephant"})
+@SpringBootApplication(scanBasePackages={"com.elephantdrummer"})
 public class SpringBootWebApplication extends SpringBootServletInitializer {
 	
 

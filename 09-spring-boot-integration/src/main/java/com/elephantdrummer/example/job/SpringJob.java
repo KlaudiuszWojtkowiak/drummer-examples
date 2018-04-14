@@ -22,4 +22,6 @@ public class SpringJob implements DrummerObservable{
 	public void test() {
 		log.info("Spring Job at 1 second");
 	}
+	
+
 }

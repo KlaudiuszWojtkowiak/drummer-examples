@@ -6,6 +6,7 @@ import com.elephantdrummer.annotation.DayOfWeek;
 import com.elephantdrummer.annotation.DrummerJob;
 import com.elephantdrummer.annotation.TestJob;
 import com.elephantdrummer.annotation.trigger.At;
+import com.elephantdrummer.annotation.trigger.TimeZoneEnum;
 import com.elephantdrummer.scope.DrummerObservable;
 
 public class Examples implements DrummerObservable{
@@ -16,6 +17,18 @@ public class Examples implements DrummerObservable{
 	@TestJob(executeJob=false)
 	@DrummerJob(at= @At(hour=2,dayOfWeek=DayOfWeek.FRIDAY))
 	public void test01() {
+		
+	}
+	
+	@TestJob(executeJob=false)
+	@DrummerJob(at= @At(hour=2,timezone=TimeZoneEnum.AMERICA_CHICAGO))
+	public void test02() {
+		
+	}
+	
+	@TestJob(executeJob=false)
+	@DrummerJob(at= @At(hour=2,dayOfWeek=DayOfWeek.FRIDAY))
+	public void test03() {
 		
 	}
 

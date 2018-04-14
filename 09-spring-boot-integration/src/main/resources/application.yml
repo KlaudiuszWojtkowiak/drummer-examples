@@ -5,8 +5,9 @@ server:
 #=========== DRUMMER JOBS ===========
 
 drummer:
-  springtest:
-    everySecond: 25
+  configJob:
+    every:
+      second: 25
 
 
 #=========== EOF DRUMMER JOBS ===========
