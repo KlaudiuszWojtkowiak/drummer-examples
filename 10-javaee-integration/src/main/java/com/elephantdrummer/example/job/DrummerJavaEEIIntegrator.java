@@ -29,13 +29,13 @@ public class DrummerJavaEEIIntegrator {
 	
 	@PostConstruct
 	public void init(){
+		if (joblist==null) return;
+		//put your properties here
 		starter.setConfigProperties(new HashMap<String,String>());
-		List<DrummerObservable> l=new LinkedList<>();
-		for (DrummerObservable dobs:joblist) {
-			l.add(dobs);
-		}
 		
-		starter.boot(l);
+		List<DrummerObservable> jobs=new LinkedList<>();
+		joblist.forEach(jobs::add);
+		starter.boot(jobs);
 	}
 	
 	@PreDestroy

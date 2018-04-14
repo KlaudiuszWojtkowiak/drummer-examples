@@ -31,7 +31,6 @@ public class DrummerStartup implements Runnable{
 	
 	
 	public static void main(String[] args) {
-//		DrummerStarter.init();
 		Weld weld = new Weld();
 	    WeldContainer container = weld.initialize();
 	    DrummerStartup application = container.instance().select(DrummerStartup.class).get();
@@ -42,13 +41,9 @@ public class DrummerStartup implements Runnable{
 	@Override
 	public void run() {
 		starter.setConfigProperties(new HashMap<String,String>());
-		List<DrummerObservable> l=new LinkedList<>();
-		for (DrummerObservable dobs:joblist) {
-			l.add(dobs);
-		}
-		
-		
-		starter.boot(l);
+		List<DrummerObservable> jobs=new LinkedList<>();
+		joblist.forEach(jobs::add);
+		starter.boot(jobs);
 		
 		
 		while (true) {
@@ -59,8 +54,6 @@ public class DrummerStartup implements Runnable{
 				e.printStackTrace();
 			}
 		}
-		
-
 	}
 	
 	
