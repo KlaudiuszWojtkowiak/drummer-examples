@@ -15,7 +15,7 @@ public class JeeJob implements DrummerObservable{
 	
 	@DrummerJob(every=@Every(second=10))
 	public void jeeJobMethod() {
-		log.info("i'm a jee job");
+		log.info("i'm a JEE job");
 	}
 
 }
