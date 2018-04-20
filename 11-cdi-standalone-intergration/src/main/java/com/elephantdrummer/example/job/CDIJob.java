@@ -15,7 +15,7 @@ public class CDIJob implements DrummerObservable{
 	
 	@DrummerJob(every=@Every(second=10))
 	public void jeeJobMethod() {
-		log.info("i'm a cdi standalone job");
+		log.info("i'm a CDI standalone job");
 	}
 
 }
