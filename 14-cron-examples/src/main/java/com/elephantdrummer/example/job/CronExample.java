@@ -4,8 +4,6 @@ import java.util.logging.Logger;
 
 import com.elephantdrummer.annotation.DrummerJob;
 import com.elephantdrummer.annotation.TestJob;
-import com.elephantdrummer.annotation.trigger.At;
-import com.elephantdrummer.annotation.trigger.Every;
 import com.elephantdrummer.scope.DrummerObservable;
 
 /**
