@@ -62,12 +62,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.elephant</groupId>
-			<artifactId>elephant-internal-logger-spring-jul</artifactId>
-			<version>1.0.0</version>
-			<scope>compile</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
